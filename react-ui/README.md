@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# This is a simple full-stack app with ML capabilities
 
+This app makes predictions about which flower species it is based on it's provided dimensions. It is a classic example of classification using supervised learning.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project also utilised NodeJS, Express, Tensorflow.js and React-hook-form library.
+This app takes sepal length, sepal width, petal length, petal width, number of epochs and learning rate as input.
+It builds a neural network using a sequential model by training data provided in the app, and makes predictions based on number of epochs, learning rate ,MSE loss function and Adam algorithm.
 
-## Available Scripts
+# To run this project, you need to open two separate teminals.
 
-In the project directory, you can run:
+## In one ternimal, cd to project directory, then follow these steps:
 
-### `npm start`
+### run `npm install`
+This will install all the dependencies. 
+Although I made sure to include all the dependencies, I have realised that tensorflow.js creates issues on some machines.
 
-Runs the app in the development mode.\
+### If you successfully installed all the dependencies, then run `npm run dev`
+This will start the back-end server on port 5001.
+
+## In second terminal, cd to project directory, then cd to 'react-ui' folder and follow these steps:
+
+### run `npm install`
+This will install all the dependencies. 
+I made sure to include all the dependencies, so there shouldn't be any major issues.
+
+### If you successfully installed all the dependencies, then run `npm start`
+This will start the react front-end server on port 3000.
+
+It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Once both back-end and front-end are up and running, you will see a screen like this:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![Screen Shot 2022-08-29 at 7 58 12 PM](https://user-images.githubusercontent.com/13262518/187321497-63691f81-7f98-45bc-9240-d14749100278.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enter proper values in the input boxes and click submit.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It will submit the form to the backend, train the model, make the prediction and return the results to the front.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## In the end you will see a screen like this:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screen Shot 2022-08-29 at 7 59 09 PM](https://user-images.githubusercontent.com/13262518/187323381-3d940add-2bb0-4282-8ee9-8923b7e44ad8.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It shows you the output of the model and what species the flower could be based on the inputs. Currently this app can predict 3 species of flowers. But it can easily be extended to more species, if such a training data is available.
